@@ -6,15 +6,15 @@
   
   <title>宣告變數方法：var、let、const區別(未完成) | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="一、var 宣告變數1.在全域使用「var」宣告變數並同時賦予值，無論在function( )&amp;#123;  &amp;#125;區域內或外，皆可讀取那個「全域變數」的值 例如: 12345var greet &#x3D;&quot;Hey whasup&quot;; &#x2F;&#x2F;宣告變數greet，賦予值＂Hey whasup＂      function Tom()&amp;#123; &#x2F;&#x2F;在function內(區域內)查看全">
+  <meta name="description" content="一、var 宣告變數1.全域變數在全域使用var宣告變數並同時賦值，無論在區域內或區域外，皆可取得該全域變數的值;例如: 12345var greet &#x3D;&quot;Hey whasup&quot;; &#x2F;&#x2F;用var宣告greet並賦值Hey whasup      function Tom()&amp;#123; &#x2F;&#x2F;區域內          console.log(greet)&#x2F;&#x2F;Hey whasup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="宣告變數方法：var、let、const區別(未完成)">
 <meta property="og:url" content="https://sarah001160.github.io/sarah.github.io/2021/09/22/New-Post/index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="一、var 宣告變數1.在全域使用「var」宣告變數並同時賦予值，無論在function( )&amp;#123;  &amp;#125;區域內或外，皆可讀取那個「全域變數」的值 例如: 12345var greet &#x3D;&quot;Hey whasup&quot;; &#x2F;&#x2F;宣告變數greet，賦予值＂Hey whasup＂      function Tom()&amp;#123; &#x2F;&#x2F;在function內(區域內)查看全">
+<meta property="og:description" content="一、var 宣告變數1.全域變數在全域使用var宣告變數並同時賦值，無論在區域內或區域外，皆可取得該全域變數的值;例如: 12345var greet &#x3D;&quot;Hey whasup&quot;; &#x2F;&#x2F;用var宣告greet並賦值Hey whasup      function Tom()&amp;#123; &#x2F;&#x2F;區域內          console.log(greet)&#x2F;&#x2F;Hey whasup">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-09-22T10:26:20.000Z">
-<meta property="article:modified_time" content="2021-09-22T12:46:49.352Z">
+<meta property="article:modified_time" content="2021-10-18T13:03:51.537Z">
 <meta property="article:author" content="Sarah">
 <meta name="twitter:card" content="summary">
   
@@ -99,26 +99,26 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="一、var-宣告變數"><a href="#一、var-宣告變數" class="headerlink" title="一、var 宣告變數"></a>一、var 宣告變數</h3><p>1.在<b>全域</b>使用「var」宣告變數並同時賦予值，<br>無論在<code>function( )&#123;  &#125;</code>區域內或外，<br>皆可讀取那個「全域變數」的值</p>
+        <h3 id="一、var-宣告變數"><a href="#一、var-宣告變數" class="headerlink" title="一、var 宣告變數"></a>一、var 宣告變數</h3><h4 id="1-全域變數"><a href="#1-全域變數" class="headerlink" title="1.全域變數"></a>1.全域變數</h4><p>在全域使用var宣告變數並同時賦值，<br>無論在區域內或區域外，<br>皆可取得該全域變數的值;<br>例如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span>; <span class="comment">//用var宣告greet並賦值Hey whasup</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">Tom</span>(<span class="params"></span>)</span>&#123; <span class="comment">//區域內</span></span><br><span class="line">          <span class="built_in">console</span>.log(greet)<span class="comment">//Hey whasup</span></span><br><span class="line">      &#125;</span><br><span class="line">      Tom() <span class="comment">//執行Tom function</span></span><br></pre></td></tr></table></figure>
+
+
+<h5 id="缺點-在全域用var宣告變數，其值很容易被影響，一不小心重複宣告變數、賦值，變數原本的值就會被更動到"><a href="#缺點-在全域用var宣告變數，其值很容易被影響，一不小心重複宣告變數、賦值，變數原本的值就會被更動到" class="headerlink" title="缺點:在全域用var宣告變數，其值很容易被影響，一不小心重複宣告變數、賦值，變數原本的值就會被更動到"></a>缺點:在全域用var宣告變數，其值很容易被影響，一不小心重複宣告變數、賦值，變數原本的值就會被更動到</h5><br>
+例如：
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span>; <span class="comment">//宣告greet並賦值Hey whasup</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">Tom</span>(<span class="params"></span>)</span>&#123; <span class="comment">//區域</span></span><br><span class="line">          <span class="keyword">var</span> greet = <span class="string">&quot;byebye&quot;</span><span class="comment">//重複宣告變數及賦值</span></span><br><span class="line">          <span class="built_in">console</span>.log(greet)<span class="comment">// byebye</span></span><br><span class="line">      &#125;</span><br><span class="line">      Tom() </span><br></pre></td></tr></table></figure>
+
+<h4 id="2-區域變數"><a href="#2-區域變數" class="headerlink" title="2.區域變數"></a>2.區域變數</h4><p>若在區域<code>function()&#123;…&#125;</code>內使用「var」宣告變數並賦值，<br>則「該區域」外的範圍，都無法讀取區域內的變數</p>
 <p>例如:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span>; <span class="comment">//宣告變數greet，賦予值＂Hey whasup＂</span></span><br><span class="line">      <span class="function"><span class="keyword">function</span> <span class="title">Tom</span>(<span class="params"></span>)</span>&#123; <span class="comment">//在function內(區域內)查看全域變數greet的值</span></span><br><span class="line">          <span class="built_in">console</span>.log(greet) <span class="comment">//全域變數greet的值為Hey whasup </span></span><br><span class="line">      &#125;</span><br><span class="line">      Tom() <span class="comment">//執行Tom function</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Tom</span>(<span class="params"></span>)</span>&#123;<span class="comment">//區域</span></span><br><span class="line">           <span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span>;<span class="comment">//宣告greet並賦值&quot;Hey Whasup&quot;</span></span><br><span class="line">       &#125;</span><br><span class="line">       Tom() </span><br><span class="line">       <span class="built_in">console</span>.log(greet)<span class="comment">//Uncaught ReferenceError: greet is not defined 全域無法讀取區域內的變數</span></span><br></pre></td></tr></table></figure>
 
 
-
-<p>2<br>若在區域<code>function()&#123;…&#125;</code>內使用「var」宣告變數並賦予值，<br>則在「全域」或「其他區域」都無法讀取「該區域變數」的值<br>「該區域變數」的值，只有在那個變數的宣告地點「該區域內」才讀取得到</p>
-<p>例如:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Tom</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">           <span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span>;<span class="comment">//宣告區域變數greet並賦予值&quot;Hey Whasup&quot;</span></span><br><span class="line">       &#125;</span><br><span class="line">       Tom() <span class="comment">//執行Tom function</span></span><br><span class="line">       <span class="built_in">console</span>.log(greet)<span class="comment">//在全域無法讀取區域變數的值，出現訊息Uncaught ReferenceError: greet is not defined</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-只宣告變數沒賦予值-undefined"><a href="#3-只宣告變數沒賦予值-undefined" class="headerlink" title="3.只宣告變數沒賦予值,undefined"></a>3.只宣告變數沒賦予值,undefined</h4><p>若var只有宣告變數，但沒有賦予值給變數，瀏覽器的console.log會出現<code>undefined</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//只有宣告變數，但沒有賦予值</span></span><br><span class="line"> <span class="keyword">var</span> greet   </span><br><span class="line"> <span class="built_in">console</span>.log(greet)<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
 
 
-
-<p>3若var只有宣告變數，但沒有賦予值給變數，瀏覽器的console.log會出現<code>undefined</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//只有宣告變數greet但沒有賦予值</span></span><br><span class="line"> <span class="keyword">var</span> greet   </span><br><span class="line"> <span class="built_in">console</span>.log(greet)<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
-
-<p>－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－</p>
-<h3 id="二、var可以重複宣告變數並賦予值"><a href="#二、var可以重複宣告變數並賦予值" class="headerlink" title="二、var可以重複宣告變數並賦予值"></a>二、var可以重複宣告變數並賦予值</h3><p>例如:<br>Ex1</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span>; <span class="comment">//宣告變數greet,給值&quot;Hey whasup&quot;  </span></span><br><span class="line"><span class="keyword">var</span> greet = <span class="string">&quot;goodbye&quot;</span>　<span class="comment">//重複宣告變數greet，給新值＂goodbye＂</span></span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//答案是goodbye　（後一行的值會覆蓋前面的值）</span></span><br></pre></td></tr></table></figure>
-
-
+<h4 id="4-var可以重複宣告變數並賦予值"><a href="#4-var可以重複宣告變數並賦予值" class="headerlink" title="4.var可以重複宣告變數並賦予值"></a>4.var可以重複宣告變數並賦予值</h4><p>例如:<br>Ex1</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span>;  </span><br><span class="line"><span class="keyword">var</span> greet = <span class="string">&quot;goodbye&quot;</span>　</span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//答案是goodbye　（同樣的變數,後一行的程式碼會覆蓋前面的）</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -128,14 +128,36 @@
 
 
 
-<h3 id="var宣告的變數，該變數可以被再次賦予新值"><a href="#var宣告的變數，該變數可以被再次賦予新值" class="headerlink" title="var宣告的變數，該變數可以被再次賦予新值"></a>var宣告的變數，該變數可以被再次賦予新值</h3><p>例如:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span> <span class="comment">//宣告及賦予值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//更新變數的值為Goodbye</span></span><br><span class="line">greet=<span class="string">&quot;Goodbye&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//Goodbye</span></span><br></pre></td></tr></table></figure>
+<h3 id="var變數的值可以被更新"><a href="#var變數的值可以被更新" class="headerlink" title="var變數的值可以被更新"></a>var變數的值可以被更新</h3><p>例如:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">//更新變數greet的值為Goodbye</span></span><br><span class="line">greet=<span class="string">&quot;Goodbye&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//Goodbye</span></span><br></pre></td></tr></table></figure>
 
 
 
-<p>如果更新的值，擺在宣告變數程式碼的上一行會怎樣?<br>（如下）<br> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 　　greet=<span class="string">&quot;Goodbye&quot;</span> <span class="comment">//沒宣告，直接賦予值&quot;Goodbye&quot;</span></span><br><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span><span class="comment">//宣告變數greet及賦予值&quot;Hey whasup&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//Hey whasup</span></span><br></pre></td></tr></table></figure><br>var變數,有Hoisting(上升)特性，var宣告變數時沒有給值,該變數的值會先出現undefined<br>(不確定這樣解釋是否正確，但先以自己看得懂、記得住為主)</p>
-<p>－－－－－－－－－－－－－－－－－－－<br>const 及let 筆記尚未寫完<br>(待補充)<br>三、1.const宣告的變數，值不能被更新<br>　　 所以注意const宣告變數的當下就要馬上賦予值<br>    2.有例外,const若宣告的變數型態是陣列[]或物件{}<br>      則可以新增屬性跟值到該陣列或該物件中</p>
-<p>四、let不能重複宣告變數<br>　　let宣告的變數,可以更新值<br>    在不同區域中用let宣告同樣名稱的變數是OK的,因為在區域中let宣告的變數只有在該區域中才能被讀取值;不在那個特定區域中就讀不到該變數的值
+
+
+<hr>
+<h3 id="三、const宣告變數"><a href="#三、const宣告變數" class="headerlink" title="三、const宣告變數"></a>三、const宣告變數</h3><h4 id="1-const不能重複宣告變數"><a href="#1-const不能重複宣告變數" class="headerlink" title="1.const不能重複宣告變數"></a>1.const不能重複宣告變數</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit = <span class="string">&#x27;apple&#x27;</span> <span class="comment">//宣告變數fruit給予值&#x27;apple&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//apple</span></span><br><span class="line"><span class="keyword">const</span> fruit  <span class="comment">//重複宣告fruit變數</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//出現錯誤訊息 Uncaught SyntaxError: Identifier &#x27;fruit&#x27; has already been declared</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-const變數的值不能被更新"><a href="#2-const變數的值不能被更新" class="headerlink" title="2.const變數的值不能被更新"></a>2.const變數的值不能被更新</h4><h4 id="但值的型態為物件｛｝或是陣列［］者例外"><a href="#但值的型態為物件｛｝或是陣列［］者例外" class="headerlink" title="但值的型態為物件｛｝或是陣列［］者例外"></a>但值的型態為物件｛｝或是陣列［］者例外</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit = <span class="string">&#x27;apple&#x27;</span>;<span class="comment">//宣告fruit變數並賦予值&#x27;apple&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//apple</span></span><br><span class="line">fruit = <span class="string">&#x27;banana&#x27;</span>  <span class="comment">//更新fruit的值</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>const變數若為物件或陣列，物件可以被新增屬性及值、也可以更新已存在屬性的值，陣列內容也可以被新增</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =[] <span class="comment">//宣告fruit變數,賦予空陣列</span></span><br><span class="line">fruit.push(<span class="string">&#x27;apple&#x27;</span>);<span class="comment">//將&#x27;apple&#x27;推入fruit陣列中(更新變數)</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit);<span class="comment">//[&#x27;apple&#x27;]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =[] <span class="comment">//宣告fruit變數,賦予空陣列</span></span><br><span class="line">fruit.push(<span class="string">&#x27;apple&#x27;</span>);<span class="comment">//將&#x27;apple&#x27;推入fruit陣列中</span></span><br><span class="line">fruit[<span class="number">0</span>]=<span class="string">&#x27;banana&#x27;</span> <span class="comment">//將fruit陣列中第0筆屬性的值更新為&#x27;banana&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit);<span class="comment">//(1) [&#x27;banana&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =&#123;&#125;<span class="comment">//用const宣告fruit變數,賦予空物件</span></span><br><span class="line">fruit.name=<span class="string">&#x27;apple&#x27;</span>;<span class="comment">// 新增fruit的屬性name並給予值&#x27;apple&#x27;</span></span><br><span class="line">  　<span class="built_in">console</span>.log(fruit);<span class="comment">//&#123;name: &#x27;apple&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =&#123;&#125;<span class="comment">//用const宣告fruit變數,賦予空物件</span></span><br><span class="line">fruit.name=<span class="string">&#x27;apple&#x27;</span>;<span class="comment">// 新增fruit的屬性name並給予值&#x27;apple&#x27;</span></span><br><span class="line">fruit.name=<span class="string">&#x27;banana&#x27;</span>; <span class="comment">// 更新fruit屬性name的值為&#x27;banana&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit);<span class="comment">//&#123;name: &#x27;banana&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>－－－－－－－－－－－－－－－－－－－</p>
+<h3 id="四、let宣告變數"><a href="#四、let宣告變數" class="headerlink" title="四、let宣告變數"></a>四、let宣告變數</h3><h4 id="1-let不能重複宣告變數"><a href="#1-let不能重複宣告變數" class="headerlink" title="1.let不能重複宣告變數"></a>1.let不能重複宣告變數</h4><h4 id="2-let變數的值可以被更新"><a href="#2-let變數的值可以被更新" class="headerlink" title="2.let變數的值可以被更新"></a>2.let變數的值可以被更新</h4><p>　
    </p>
 
       
