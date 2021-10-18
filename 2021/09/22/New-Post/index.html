@@ -14,7 +14,7 @@
 <meta property="og:description" content="一、var 宣告變數1.全域變數在全域使用var宣告變數並同時賦值，無論在區域內或區域外，皆可取得該全域變數的值;例如: 12345var greet &#x3D;&quot;Hey whasup&quot;; &#x2F;&#x2F;用var宣告greet並賦值Hey whasup      function Tom()&amp;#123; &#x2F;&#x2F;區域內          console.log(greet)&#x2F;&#x2F;Hey whasup">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-09-22T10:26:20.000Z">
-<meta property="article:modified_time" content="2021-10-18T13:03:51.537Z">
+<meta property="article:modified_time" content="2021-10-18T13:54:24.571Z">
 <meta property="article:author" content="Sarah">
 <meta name="twitter:card" content="summary">
   
@@ -128,29 +128,31 @@
 
 
 
-<h3 id="var變數的值可以被更新"><a href="#var變數的值可以被更新" class="headerlink" title="var變數的值可以被更新"></a>var變數的值可以被更新</h3><p>例如:</p>
+<h3 id="5-var變數的值可以被更新"><a href="#5-var變數的值可以被更新" class="headerlink" title="5.var變數的值可以被更新"></a>5.var變數的值可以被更新</h3><p>例如:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> greet =<span class="string">&quot;Hey whasup&quot;</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">//更新變數greet的值為Goodbye</span></span><br><span class="line">greet=<span class="string">&quot;Goodbye&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//Goodbye</span></span><br></pre></td></tr></table></figure>
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <hr>
-<h3 id="三、const宣告變數"><a href="#三、const宣告變數" class="headerlink" title="三、const宣告變數"></a>三、const宣告變數</h3><h4 id="1-const不能重複宣告變數"><a href="#1-const不能重複宣告變數" class="headerlink" title="1.const不能重複宣告變數"></a>1.const不能重複宣告變數</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit = <span class="string">&#x27;apple&#x27;</span> <span class="comment">//宣告變數fruit給予值&#x27;apple&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//apple</span></span><br><span class="line"><span class="keyword">const</span> fruit  <span class="comment">//重複宣告fruit變數</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//出現錯誤訊息 Uncaught SyntaxError: Identifier &#x27;fruit&#x27; has already been declared</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-const變數的值不能被更新"><a href="#2-const變數的值不能被更新" class="headerlink" title="2.const變數的值不能被更新"></a>2.const變數的值不能被更新</h4><h4 id="但值的型態為物件｛｝或是陣列［］者例外"><a href="#但值的型態為物件｛｝或是陣列［］者例外" class="headerlink" title="但值的型態為物件｛｝或是陣列［］者例外"></a>但值的型態為物件｛｝或是陣列［］者例外</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit = <span class="string">&#x27;apple&#x27;</span>;<span class="comment">//宣告fruit變數並賦予值&#x27;apple&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//apple</span></span><br><span class="line">fruit = <span class="string">&#x27;banana&#x27;</span>  <span class="comment">//更新fruit的值</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+<h3 id="二、const宣告變數"><a href="#二、const宣告變數" class="headerlink" title="二、const宣告變數"></a>二、const宣告變數</h3><h4 id="1-const不能重複宣告變數"><a href="#1-const不能重複宣告變數" class="headerlink" title="1.const不能重複宣告變數"></a>1.const不能重複宣告變數</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit = <span class="string">&#x27;apple&#x27;</span> <span class="comment">//宣告變數fruit給予值&#x27;apple&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//apple</span></span><br><span class="line"><span class="keyword">const</span> fruit  <span class="comment">//重複宣告fruit變數</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//Uncaught SyntaxError: Identifier &#x27;fruit&#x27; has already been declared---&gt;fruit已經被宣告過了 </span></span><br></pre></td></tr></table></figure>
+<h4 id="2-const變數的值不能被更新"><a href="#2-const變數的值不能被更新" class="headerlink" title="2.const變數的值不能被更新"></a>2.const變數的值不能被更新</h4><h4 id="但值的型態為物件｛｝或是陣列［］者除外"><a href="#但值的型態為物件｛｝或是陣列［］者除外" class="headerlink" title="但值的型態為物件｛｝或是陣列［］者除外"></a>但值的型態為物件｛｝或是陣列［］者除外</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit = <span class="string">&#x27;apple&#x27;</span>;<span class="comment">//宣告fruit變數並賦予值&#x27;apple&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//apple</span></span><br><span class="line">fruit = <span class="string">&#x27;banana&#x27;</span>  <span class="comment">//更新fruit的值</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit) <span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
 
 
 
 
 
-<p>const變數若為物件或陣列，物件可以被新增屬性及值、也可以更新已存在屬性的值，陣列內容也可以被新增</p>
+<p>const變數若為物件或陣列，物件可以被新增屬性及值、也可以更新已存在屬性的值，陣列內容也可以被新增<br>例如:<br>(1)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =[] <span class="comment">//宣告fruit變數,賦予空陣列</span></span><br><span class="line">fruit.push(<span class="string">&#x27;apple&#x27;</span>);<span class="comment">//將&#x27;apple&#x27;推入fruit陣列中(更新變數)</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit);<span class="comment">//[&#x27;apple&#x27;]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>(2)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =[] <span class="comment">//宣告fruit變數,賦予空陣列</span></span><br><span class="line">fruit.push(<span class="string">&#x27;apple&#x27;</span>);<span class="comment">//將&#x27;apple&#x27;推入fruit陣列中</span></span><br><span class="line">fruit[<span class="number">0</span>]=<span class="string">&#x27;banana&#x27;</span> <span class="comment">//將fruit陣列中第0筆屬性的值更新為&#x27;banana&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit);<span class="comment">//(1) [&#x27;banana&#x27;]</span></span><br></pre></td></tr></table></figure>
-
-
+<p>(3)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =&#123;&#125;<span class="comment">//用const宣告fruit變數,賦予空物件</span></span><br><span class="line">fruit.name=<span class="string">&#x27;apple&#x27;</span>;<span class="comment">// 新增fruit的屬性name並給予值&#x27;apple&#x27;</span></span><br><span class="line">  　<span class="built_in">console</span>.log(fruit);<span class="comment">//&#123;name: &#x27;apple&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
-
-
+<p>(4)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruit =&#123;&#125;<span class="comment">//用const宣告fruit變數,賦予空物件</span></span><br><span class="line">fruit.name=<span class="string">&#x27;apple&#x27;</span>;<span class="comment">// 新增fruit的屬性name並給予值&#x27;apple&#x27;</span></span><br><span class="line">fruit.name=<span class="string">&#x27;banana&#x27;</span>; <span class="comment">// 更新fruit屬性name的值為&#x27;banana&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(fruit);<span class="comment">//&#123;name: &#x27;banana&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
 
 
