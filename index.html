@@ -89,7 +89,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/sarah.github.io/2021/09/22/New-Post/">宣告變數方法：var、let、const區別(未完成)</a>
+      <a class="p-name article-title" href="/sarah.github.io/2021/09/22/New-Post/">宣告變數方法：var、let、const區別</a>
     </h1>
   
 
@@ -166,12 +166,12 @@
 <h4 id="2-let宣告的變數，其值可以被更新"><a href="#2-let宣告的變數，其值可以被更新" class="headerlink" title="2.let宣告的變數，其值可以被更新"></a>2.let宣告的變數，其值可以被更新</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> greet =<span class="string">&quot;Hey whasup&quot;</span>;</span><br><span class="line">    greet=<span class="string">&quot;hey hey&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(greet);<span class="comment">//hey hey</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="3-在全域用let宣告變數，區域內是否可讀取該變數？可以"><a href="#3-在全域用let宣告變數，區域內是否可讀取該變數？可以" class="headerlink" title="3.在全域用let宣告變數，區域內是否可讀取該變數？可以"></a>3.在全域用let宣告變數，區域內是否可讀取該變數？可以</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> greet=<span class="string">&quot;Hey whasup&quot;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greeting</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(greet);</span><br><span class="line">&#125;</span><br><span class="line">greeting()<span class="comment">//Hey whasup </span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="4-在區域內用let宣告變數，全域是否可讀取該變數？無法讀取"><a href="#4-在區域內用let宣告變數，全域是否可讀取該變數？無法讀取" class="headerlink" title="4.在區域內用let宣告變數，全域是否可讀取該變數？無法讀取"></a>4.在區域內用let宣告變數，全域是否可讀取該變數？無法讀取</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greeting</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> greet =<span class="string">&quot;Hey whasup&quot;</span>;</span><br><span class="line">&#125; </span><br><span class="line">greeting();</span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//Uncaught ReferenceError: greet is not defined</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-在區域內用let宣告變數，全域是否可讀取該變數？No-無法讀取"><a href="#4-在區域內用let宣告變數，全域是否可讀取該變數？No-無法讀取" class="headerlink" title="4.在區域內用let宣告變數，全域是否可讀取該變數？No, 無法讀取"></a>4.在區域內用let宣告變數，全域是否可讀取該變數？No, 無法讀取</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">greeting</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> greet =<span class="string">&quot;Hey whasup&quot;</span>;</span><br><span class="line">&#125; </span><br><span class="line">greeting();</span><br><span class="line"><span class="built_in">console</span>.log(greet)<span class="comment">//Uncaught ReferenceError: greet is not defined</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sarah001160.github.io/sarah.github.io/2021/09/22/New-Post/" data-id="cktvazxms00006wtc73st0qnc" data-title="宣告變數方法：var、let、const區別(未完成)" class="article-share-link">Share</a>
+      <a data-url="https://sarah001160.github.io/sarah.github.io/2021/09/22/New-Post/" data-id="cktvazxms00006wtc73st0qnc" data-title="宣告變數方法：var、let、const區別" class="article-share-link">Share</a>
       
       
       
@@ -265,7 +265,7 @@
       <ul>
         
           <li>
-            <a href="/sarah.github.io/2021/09/22/New-Post/">宣告變數方法：var、let、const區別(未完成)</a>
+            <a href="/sarah.github.io/2021/09/22/New-Post/">宣告變數方法：var、let、const區別</a>
           </li>
         
           <li>
@@ -285,7 +285,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2021 Sarah<br>
+      &copy; 2022 Sarah<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
